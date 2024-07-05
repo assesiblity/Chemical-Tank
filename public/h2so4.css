@@ -1,0 +1,169 @@
+.h2so4 {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  flex: 1;
+}
+
+.image-container {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.image-container img {
+  width: 250px;
+  height: auto;
+}
+
+.h2-H h2,
+.h2-H h3 {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+.h2-p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-size: 15px;
+  color: #474545;
+}
+.h2-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.hds {
+  font-size: 15px !important;
+  margin-right: 20px;
+  padding-inline-end: 20px;
+  line-height: 1.5;
+}
+
+/* table,
+th,
+td {
+  border: 1px solid #796f6f;
+  padding: 8px;
+} */
+.h2-table .h2-thead .h2-tbody {
+  border: 1px solid #796f6f;
+  padding: 8px;
+}
+
+.h2-thead {
+  background-color: #5e5959;
+}
+
+.h2-thead,
+.h2-tbody {
+  text-align: center;
+}
+
+.h2-thead[colspan="3"] {
+  text-align: center;
+}
+.h2so4-p {
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-container {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .image-container img {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  ul {
+    width: 100%;
+  }
+  li {
+    width: 80%;
+    line-height: 1.5;
+  }
+  .h2-H {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .h2-H {
+    font-size: 15px;
+    margin-inline-end: 20px;
+    padding-inline-end: 20px;
+  }
+  .h2-table {
+    display: block;
+    overflow-x: auto;
+    padding-right: 20px;
+    margin-right: 20px;
+    margin-inline-end: 20px;
+    padding-inline-end: 20px;
+    columns: black;
+  }
+  .h2-thead {
+    display: block;
+    font-size: 10px;
+    margin-inline-end: 20px;
+    padding-inline-end: 20px;
+    color: black;
+  }
+
+  .hds {
+    font-size: 10px;
+    margin-right: 20px;
+    padding-inline-end: 20px;
+    line-height: 1.5;
+  }
+  .h2so4-p {
+    font-size: 15px;
+    padding-inline-end: 20px;
+    line-height: 1.5;
+    margin-inline-end: 20px;
+  }
+}
+/* hhh */
+
+/* Make the table scrollable on small screens */
+/* @media only screen and (max-width: 600px) {
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    } */

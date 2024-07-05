@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap");
+
+:root {
+  --color: #be9c79;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+*::selection {
+  background: var(--color);
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+  font-size: 50%;
+  overflow-x: hidden;
+  margin-top: 60px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--color);
+}
+.sub-heading {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.blog .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.blog .box-container .box {
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.blog .box-container .box .image {
+  height: 30rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.blog .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blog .box-container .box:hover .image img {
+  transform: scale(1.2);
+}
+
+.blog .box-container .box .content {
+  padding: 2rem 2.5rem;
+}
+
+.blog .box-container .box .content .icons {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog .box-container .box .content .icons a {
+  font-size: 1.4rem;
+  color: #666;
+}
+.blog .box-container .box .content .icons a:hover {
+  color: var(--color);
+}
+
+.blog .box-container .box .content .icons a i {
+  color: var(--color);
+  padding-right: 0.5rem;
+}
+
+.blog .box-container .box .content h3 {
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.blog .box-container .box .content p {
+  font-size: 1.4rem;
+  color: #666;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.btns {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--color);
+  color: var(--color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btns:hover {
+  background: var(--color);
+  color: #fff;
+}
+
+/* mediaquery */
+
+@media (max-width: 450px) {
+  /* html {
+    font-size: 40%;
+  } */
+  .blog .box-container {
+    width: 50%;
+  }
+  .sub-heading {
+    text-align: left;
+    margin-left: 20px;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,75 @@
+<% layout("/layouts/boilerplate") %>
+<!-- alert messages start -->
+<body class="contact-page">
+ <div class="alert-success" id="alert-success">
+    <span>Message Sent! Thank you for contacting us.</span>
+  </div>
+  <div class="alert-error" id="alert-error">
+    <span>Something went wrong! Please try again.</span>
+  </div>
+  <!-- alert messages end -->
+
+  <!-- contact section start -->
+  <div class="contact-section">
+    <div class="contact-info">
+      <div>
+        <i class="fas fa-map-marker-alt"></i>A-602, Naurang House, 21, K.G.
+        Marg, Connaught Place, New Delhi-110001, India.
+      </div>
+      <div>
+        <i class="fas fa-envelope"></i>marketing@technuinternational.com
+      </div>
+      <div><i class="fas fa-phone"></i>+91-8595392713</div>
+      <div><i class="fas fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
+    </div>
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form
+        class="contact"
+        id="contact-form"
+        onsubmit="return handleSubmit(event)"
+      >
+        <input
+          type="text"
+          name="name"
+          class="text-box"
+          placeholder="Your Name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          class="text-box"
+          placeholder="Your Email"
+          required
+        />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <input type="submit" name="submit" class="send-btn" value="Send" />
+      </form>
+    </div>
+  </div>
+  <!-- contact section end -->
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      // Hide error message if shown
+      document.getElementById("alert-error").style.display = "none";
+      // Show success message
+      document.getElementById("alert-success").style.display = "block";
+      // Optionally, you can hide the success message after a few seconds
+      setTimeout(function () {
+        document.getElementById("alert-success").style.display = "none";
+      }, 5000);
+
+      // Clear form fields
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>

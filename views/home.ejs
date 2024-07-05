@@ -1,0 +1,56 @@
+<% layout("/layouts/boilerplate") %>
+
+   
+  <body>
+    <div class="container">
+      <% let slides = [
+        { title: 'H2SO4 (SULFURIC ACID) CHEMICAL TANK', image: 'H2SO4.png', content: 'With their robust load tolerance, crosslinked polyethylene tanks can more than handle the chemical’s heavy weight. The molecular bonding of XLPE and tank wall thickness is particularly important in the bottom third of the tank, where high levels of load are concentrated.' },
+        { title: 'HCL (HYDROCHLORIC ACID) TANKS', image: 'HCL.png', content: 'CONTROLLING A CHEMICAL – AND ITS FUMES Also known as muriatic acid, hydrochloric acid is used to acidize petroleum wells, remove scales from boilers, aid in ore reduction and serve as a chemical intermediate, among other applications.' },
+        { title: 'NAOCL (SODIUM HYPOCHLORITE) CHEMICAL TANKS', image: 'NaOCL.png', content: 'Sodium hypochlorite solutions are very widely used within the water treatment industries. They are also used as a sterile bleach solution from the common domestic applications to the food industries to swimming pools. With the high levels of available chlorine, up to 15%, in a fresh solution, many thousands of tonnes are consumed on a regular basis.' },
+        { title: 'NAOH (SODIUM HYDROXIDE) TANKS', image: 'NaOH.png', content: 'DEFYING A CHEMICAL THAT “FINDS” LEAKS Also known as caustic soda or liquid lye, sodium hydroxide is used to adjust pH in water and wastewater treatment and in the manufacture of chemicals, rayon, cellophane, pulp and paper, aluminum, detergents, soaps and a wide range of other products.' },
+        { title: 'HF (HYDROFLUORIC ACID) TANKS', image: 'HF.png', content: 'REDUCING THE RISK OF HUMAN EXPOSURE Used in the production of aluminum, fluorocarbons and gasoline and for applications like glass etching and uranium processing, hydrofluoric acid is an extremely dangerous chemical that must be handled with the utmost care.' },
+        { title: 'H2O2 (HYDROGEN PEROXIDE) TANKS', image: 'H2O.png', content: 'Available in a variety of concentrations, hydrogen peroxide is used as an oxidizing agent in textile, paper and fur processing. It is also used as a plasticizer, a polymerization catalyst and a water and sewage treatment chemical.' }
+      ]; %>
+
+      <% slides.forEach((slide, index) => { %>
+        <div class="slide-container <%= index === 0? 'active' : '' %>">
+          <div class="slide">
+            <div class="content">
+              <h1><%= slide.title %></h1>
+              <p><%= slide.content %></p>
+              <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="image">
+              <img src="<%= slide.image %>" alt="" />
+            </div>
+          </div>
+        </div>
+      <% }); %>
+
+      <div id="prev" onclick="prev()">&lt;</div>
+      <div id="next" onclick="next()">&#62;</div>
+    </div>
+
+    <script>
+      let slides = document.querySelectorAll(".slide-container");
+      let index = 0;
+
+      //next function
+      function next() {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+      }
+
+      //prev function
+      function prev() {
+        slides[index].classList.remove("active");
+        index = (index - 1 + slides.length) % slides.length;
+        slides[index].classList.add("active");
+      }
+
+      //autoplay
+      setInterval(next, 7000); //slides change every 7s
+    </script>
+  </body>
+</html>

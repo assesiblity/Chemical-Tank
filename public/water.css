@@ -1,0 +1,38 @@
+.water-stroge {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: bisque;
+}
+/* .styled-image {
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  height: 450px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+} */
+.styled-image {
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  height: 450px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .styled-image {
+    width: 100%; /* make the image full-width on small screens */
+    height: auto; /* maintain the aspect ratio */
+    margin: 50px auto; /* center the image horizontally */
+  }
+}

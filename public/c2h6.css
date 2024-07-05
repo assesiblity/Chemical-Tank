@@ -1,0 +1,50 @@
+.wine {
+  font-family: Arial, sans-serif;
+  background-color: #fbeeee;
+  margin: 0;
+  padding: 20px;
+}
+.fluid-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.fluid-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.wine-heading {
+  font-size: 15px;
+  font-weight: bold;
+}
+.wine-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* margin-top: 20px; */
+  margin-bottom: 20px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 15px;
+}
+th {
+  background-color: #f2f2f2;
+}
+@media (max-width: 768px) {
+  .wine-table {
+    display: block;
+    overflow-x: auto;
+    padding-right: 20px;
+    margin-right: 20px;
+    height: 100%;
+  }
+  .ta {
+    font-size: 10px;
+
+    line-height: 1.5;
+  }
+}
